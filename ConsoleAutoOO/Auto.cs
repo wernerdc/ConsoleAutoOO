@@ -8,33 +8,68 @@ namespace ConsoleAutoOO {
     
     internal class Auto {
 
-        public string Hersteller;
-        public string Bezeichnung;
-        public int Hubraum;
-        public double PS;
+        private string _hersteller;
+        private string _bezeichnung;
+        private int _hubraum;
+        private double _ps;
+        private int _maxSpeed;
+        private double _maxDrehmoment;
 
-
-        public Auto(string hersteller, string bezeichnung, int hubraum, double ps) {
-            Hersteller = hersteller;
-            Bezeichnung = bezeichnung;
-            Hubraum = hubraum;
-            PS = ps;
+        public Auto(string hersteller, string bezeichnung, int hubraum, double ps, int maxSpeed, double maxDrehmoment) {
+            _hersteller = hersteller;
+            _bezeichnung = bezeichnung;
+            _hubraum = hubraum;
+            _ps = ps;
+            _maxSpeed = maxSpeed;
+            _maxDrehmoment = maxDrehmoment;
         }
 
-        public Auto() : this("Unbekannt", "Unbekannt", 0, 0) { 
+        public Auto() : this("Unbekannt", "Unbekannt", 0, 0, 0, 0) { 
         
         }
 
         public double KW() {
-            return PS * 0.74;
+            return _ps * 0.74;
         }
 
         public override string ToString() {
-            string str = "Hersteller: " + Hersteller +
-                         "\nBezeichnung: " + Bezeichnung +
-                         "\nHubraum: " + Hubraum +
-                         "\nPS: " + PS;
+            string str = "Hersteller: " + _hersteller +
+                         "\nBezeichnung: " + _bezeichnung +
+                         "\nHubraum: " + _hubraum +
+                         "\nPS: " + _ps +
+                         "\nHöchstgeschwindigkeit: " + _maxSpeed +
+                         "\nDrehmoment: " + _maxDrehmoment;
             return str;
+        }
+
+        public string Hersteller {
+            get => _hersteller;
+            set => _hersteller = value;
+        }
+
+        public string Bezeichnung {
+            get => _bezeichnung;
+            set => _bezeichnung = value;
+        }
+
+        public int Hubraum {
+            get => _hubraum; 
+            set => _hubraum = value;
+        }
+
+        public double PS {
+            get => _ps; 
+            set => _ps = value;
+        }
+
+        public int Geschwindigkeit {
+            get => _maxSpeed; 
+            set => _maxSpeed = value;
+        }
+
+        public double Drehmoment { 
+            get => _maxDrehmoment;  
+            set => _maxDrehmoment = value;
         }
     }
 }

@@ -18,10 +18,13 @@
                 auto1.Bezeichnung = "147";
                 auto1.Hubraum = 1900;
                 auto1.PS = 150;
+                auto1.Geschwindigkeit = 215;
+                auto1.Drehmoment = 2000;
+
                 Console.WriteLine("\nauto1:");
                 Console.WriteLine(auto1.ToString());
 
-                Auto auto2 = new Auto("BMW", "Dicke Karre", 4500, 390);
+                Auto auto2 = new Auto("BMW", "Dicke Karre", 4500, 390, 290, 6000);
                 Console.WriteLine("\nauto2:");
                 Console.WriteLine(auto2.ToString());
 
