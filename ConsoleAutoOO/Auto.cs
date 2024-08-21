@@ -11,11 +11,11 @@ namespace ConsoleAutoOO {
         private string _hersteller;
         private string _bezeichnung;
         private int _hubraum;
-        private double _ps;
+        private int _ps;
         private int _maxSpeed;
-        private double _maxDrehmoment;
+        private int _maxDrehmoment;
 
-        public Auto(string hersteller, string bezeichnung, int hubraum, double ps, int maxSpeed, double maxDrehmoment) {
+        public Auto(string hersteller, string bezeichnung, int hubraum, int ps, int maxSpeed, int maxDrehmoment) {
             _hersteller = hersteller;
             _bezeichnung = bezeichnung;
             _hubraum = hubraum;
@@ -57,7 +57,7 @@ namespace ConsoleAutoOO {
             set => _hubraum = value;
         }
 
-        public double PS {
+        public int PS {
             get => _ps; 
             set => _ps = value;
         }
@@ -67,7 +67,7 @@ namespace ConsoleAutoOO {
             set => _maxSpeed = value;
         }
 
-        public double Drehmoment { 
+        public int Drehmoment { 
             get => _maxDrehmoment;  
             set => _maxDrehmoment = value;
         }
